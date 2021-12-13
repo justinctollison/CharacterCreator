@@ -20,7 +20,7 @@ function NavBar({ user, setUser}) {
                 RPGC Creator
             </Logo>
             <Nav>
-                <Button as={Link} to="/">
+                <Button as={Link} to="/characters">
                     Character List
                 </Button>
                 <Button as={Link} to="/new">
@@ -44,7 +44,7 @@ const Wrapper = styled.header`
 const Logo = styled.h1`
   font-family: "Permanent Marker", cursive;
   font-size: 3rem;
-  color: deeppink;
+  color: black;
   margin: 0;
   line-height: 1;
   a {

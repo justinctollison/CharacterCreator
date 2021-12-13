@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import ReactMarkdown from "react-markdown";
 import { Button, Error, FormField, Input, Label, Textarea } from "../styles";
 import styled from "styled-components";
 
 function NewCharacter({ user }) {
     const [name, setName] = useState("My Character")
     const [race, setRace] = useState("Race")
+    const [universeGenreGame, setUniverseGenreGame] = useState("Universe or Genre or Game")
     const [characterClass, setCharacterClass] = useState("Character Class")
-    const [imageUrl, setImageUrl] = useState("")
+    const [imageUrl, setImageUrl] = useState(null)
     const [description, setDescription] = useState("Placeholder")
     const [history, setHistory] = useState("Placeholder")
 
@@ -27,6 +27,7 @@ function NewCharacter({ user }) {
             body: JSON.stringify({
                 name,
                 race,
+                universe_genre_game: universeGenreGame,
                 character_class: characterClass,
                 image_url: imageUrl,
                 description,
@@ -35,7 +36,7 @@ function NewCharacter({ user }) {
         }).then((r) => {
             setIsLoading(false);
             if(r.ok) {
-                navigate("/");
+                navigate("/characters");
             } else {
                 r.json().then((err) => setErrors(err.errors));
             }
@@ -63,6 +64,15 @@ function NewCharacter({ user }) {
                             id="race"
                             value={race}
                             onChange={(e) => setRace(e.target.value)}
+                        />
+                    </FormField>
+                    <FormField>
+                        <Label htmlFor="universeGenreGame">Universe/Genre/Game</Label>
+                        <Input
+                            type="text"
+                            id="universeGenreGame"
+                            value={universeGenreGame}
+                            onChange={(e) => setUniverseGenreGame(e.target.value)}
                         />
                     </FormField>
                     <FormField>
@@ -123,7 +133,6 @@ function NewCharacter({ user }) {
                 <p>Description: {description}</p>
                 <p>History: {history}</p>
                 <p><cite>By {user.username} </cite></p>
-                {/* <ReactMarkdown>{description}</ReactMarkdown> */}
             </WrapperChild>
         </Wrapper>
     );

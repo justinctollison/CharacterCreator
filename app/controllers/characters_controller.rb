@@ -10,10 +10,15 @@ class CharactersController < ApplicationController
         render json: character, status: :created
     end
 
+    def show
+        character = Character.find(params[:id])
+        render json: character
+    end
+
     private
 
     def character_params
-        params.permit(:name, :character_class, :race, :image_url, :description, :history)
+        params.permit(:name, :character_class, :race, :image_url, :description, :history, :universe_genre_game)
     end
 
 end

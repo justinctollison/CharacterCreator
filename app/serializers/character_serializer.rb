@@ -1,4 +1,4 @@
 class CharacterSerializer < ActiveModel::Serializer
-  attributes :id, :name, :race, :character_class, :image_url, :description, :history
+  attributes :id, :name, :race, :character_class, :image_url, :description, :history, :universe_genre_game
   has_one :user
 end

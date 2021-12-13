@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button } from "../styles";
-// import ReactMarkdown from  "react-markdown"
 
-function CharacterList( {user} ) {
+function CharacterList() {
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
@@ -20,13 +19,14 @@ function CharacterList( {user} ) {
                     <Character key={character.id}>
                         <Box>
                             <h2>{character.name}</h2>
-                            <p>Race: {character.race}</p>
-                            <p>Class: {character.character_class}</p>
-                            <p>History: {character.history}</p>
-                            <p>Description: {character.description}</p>
-                            <p>Image: {character.image_url}</p>
-                            <cite>Created by: {user.username}</cite>
-                            {/* <ReactMarkdown>{character.description}</ReactMarkdown> */}
+                            <p><b>Race:</b> {character.race}</p>
+                            <p><b>Universe/Genre/Game:</b> {character.universe_genre_game}</p>
+                            <p><b>Class:</b> {character.character_class}</p>
+                            {/* <a href={character.image_url} target="_blank" rel="noreferrer"><h4>Image Link</h4></a>
+                            <p><b>Description:</b> {character.description}</p>
+                            <p><b>History:</b> {character.history}</p>
+                            {/* <cite>Created by: {character.user.username}</cite> */}
+                            <Button as={Link} to={`/characters/${character.id}`}>View</Button>
                         </Box>
                     </Character>
                 ))
