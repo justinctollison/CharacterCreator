@@ -24,7 +24,7 @@ function CharacterList() {
                             <p><b>Class:</b> {character.character_class}</p>
                             {/* <a href={character.image_url} target="_blank" rel="noreferrer"><h4>Image Link</h4></a>
                             <p><b>Description:</b> {character.description}</p>
-                            <p><b>History:</b> {character.history}</p>
+                            <p><b>History:</b> {character.history}</p> */}
                             {/* <cite>Created by: {character.user.username}</cite> */}
                             <Button as={Link} to={`/characters/${character.id}`}>View</Button>
                         </Box>

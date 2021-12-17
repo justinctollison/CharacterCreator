@@ -15,6 +15,12 @@ class CharactersController < ApplicationController
         render json: character
     end
 
+    def destroy
+        character = Character.find(params[:id])
+        character.delete
+        head :no_content
+    end
+
     private
 
     def character_params

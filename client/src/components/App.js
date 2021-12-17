@@ -5,6 +5,7 @@ import NavBar from './NavBar';
 import CharacterList from './CharacterList';
 import NewCharacter from './NewCharacter';
 import Character from "./Character";
+import Edit from "./Edit";
 
 {/*//TODO: 
   Fix styling 
@@ -12,8 +13,12 @@ import Character from "./Character";
   Add UI to tell user is logged into certain profile. 
   Add a method to edit character pages. 
   [x] Add a method to view character pages. 
-  Add a method for certain users to delete the character pages they've made. 
-  Add a review system for characters. 
+  Add a method for users to delete the character pages they've made. 
+  Add a review system for characters.
+  Add sorting to character list
+  Add search function to character list
+  A like system?
+  Add comments/feedback to character cards
 */}
 
 function App() {
@@ -40,7 +45,11 @@ function App() {
           <Route path="/characters" element= {<CharacterList />}>
             {/* <CharacterList /> */}
           </Route>
-          <Route path="/characters/:id" element={<Character />}>
+          <Route path="/characters/:id" element={<Character user={user}/>}>
+            {/* Character Card */}
+          </Route>
+          <Route path="/characters/:id/edit" element={<Edit />}>
+            {/* Edit Card */}
           </Route>
         </Routes>
       </main>

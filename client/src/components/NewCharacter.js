@@ -6,11 +6,11 @@ import styled from "styled-components";
 function NewCharacter({ user }) {
     const [name, setName] = useState("My Character")
     const [race, setRace] = useState("Race")
-    const [universeGenreGame, setUniverseGenreGame] = useState("Universe or Genre or Game")
-    const [characterClass, setCharacterClass] = useState("Character Class")
-    const [imageUrl, setImageUrl] = useState(null)
-    const [description, setDescription] = useState("Placeholder")
-    const [history, setHistory] = useState("Placeholder")
+    const [universeGenreGame, setUniverseGenreGame] = useState("Universe, game or genre that this character belongs to")
+    const [characterClass, setCharacterClass] = useState("Class archetype, such as: rogue, warrior, knight, ect.")
+    const [imageUrl, setImageUrl] = useState("Post a url to an image")
+    const [description, setDescription] = useState("Describe your character, like their height, age, weight.")
+    const [history, setHistory] = useState("The backstory to your character that lays the foundation for their personality.")
 
     const [errors, setErrors] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -129,7 +129,6 @@ function NewCharacter({ user }) {
                 <h1>{name}</h1>
                 <h2>{race}</h2>
                 <h2>{characterClass}</h2>
-                <h3>{imageUrl}</h3>
                 <p>Description: {description}</p>
                 <p>History: {history}</p>
                 <p><cite>By {user.username} </cite></p>
