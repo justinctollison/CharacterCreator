@@ -1,7 +1,7 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import styled from "styled-components";
 import { Box, Button } from "../styles";
+
 
 function Character({user}) {
 
@@ -32,6 +32,8 @@ function Character({user}) {
     });
   }
 
+
+
   console.log(user.id)
   console.log(character.user)
 
@@ -44,6 +46,7 @@ function Character({user}) {
         <p><b>Class:</b> {character.character_class}</p>
         <p><b>Description:</b> {character.description}</p>
         <p><b>History:</b> {character.history}</p>
+        <p>Likes: {character.likes}</p>
         {/* <cite>Created by: {character.user}</cite> */}
         <Button onClick={handleDelete}>Delete</Button>
         <br></br>
