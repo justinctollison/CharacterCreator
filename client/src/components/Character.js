@@ -46,12 +46,12 @@ function Character({user}) {
         <p><b>Class:</b> {character.character_class}</p>
         <p><b>Description:</b> {character.description}</p>
         <p><b>History:</b> {character.history}</p>
-        <p>Likes: {character.likes}</p>
+        {/* <p>Likes: {character.likes}</p> */}
         {/* <cite>Created by: {character.user}</cite> */}
-        <Button onClick={handleDelete}>Delete</Button>
-        <br></br>
-        <br></br>
         <Button as={Link} to={`/characters/${id}/edit`}>Edit</Button>
+        <br></br>
+        <br></br>
+        <Button onClick={handleDelete}>Delete</Button>
     </Box>
     );
 }
