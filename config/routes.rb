@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :characters, only: [:index, :create, :show, :destroy, :update]
+  resources :users, only: [:index]
 
   post "/signup", to: "users#create"
   get "/me", to: "users#show"

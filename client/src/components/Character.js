@@ -6,6 +6,7 @@ import { Box, Button } from "../styles";
 function Character({user}) {
 
     const [character, setCharacter] = useState([]);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const { id } = useParams();
     const navigate = useNavigate();
@@ -32,6 +33,21 @@ function Character({user}) {
     });
   }
 
+  //Checking if current user equals user in the character database to allow edit changes.
+  // let button;
+
+  // if (character.user.username = user.username){
+  //   setIsLoggedIn(true)
+  // } else {
+  //   setIsLoggedIn(false)
+  // }
+
+  // if (isLoggedIn) {
+  //   button = <Button as={Link} to={`/characters/${id}/edit`}>Edit</Button>
+  // } else {
+  //   button = ""
+  // }
+
 
 
   console.log(user.id)
@@ -47,7 +63,9 @@ function Character({user}) {
         <p><b>Description:</b> {character.description}</p>
         <p><b>History:</b> {character.history}</p>
         {/* <p>Likes: {character.likes}</p> */}
-        {/* <cite>Created by: {character.user}</cite> */}
+        <cite>Created by: {character.user&&character.user.username}</cite>
+        <br></br>
+        <br></br>
         <Button as={Link} to={`/characters/${id}/edit`}>Edit</Button>
         <br></br>
         <br></br>

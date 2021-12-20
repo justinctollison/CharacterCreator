@@ -25,7 +25,9 @@ function CharacterList() {
                             {/* <a href={character.image_url} target="_blank" rel="noreferrer"><h4>Image Link</h4></a>
                             <p><b>Description:</b> {character.description}</p>
                             <p><b>History:</b> {character.history}</p> */}
-                            {/* <cite>Created by: {character.user.username}</cite> */}
+                            <cite>Created by: {character.user.username}</cite>
+                            <br></br>
+                            <br></br>
                             <Button as={Link} to={`/characters/${character.id}`}>View</Button>
                         </Box>
                     </Character>
