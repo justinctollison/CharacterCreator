@@ -10,23 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_17_093943) do
+ActiveRecord::Schema.define(version: 2021_12_28_192845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "characters", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "name"
     t.string "race"
-    t.string "character_class"
     t.string "image_url"
+    t.string "universe_genre_game"
     t.string "description"
     t.string "history"
+    t.string "character_class"
+    t.integer "likes", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
-    t.string "universe_genre_game"
-    t.integer "likes", default: 0, null: false
     t.index ["user_id"], name: "index_characters_on_user_id"
   end
 
@@ -37,5 +37,4 @@ ActiveRecord::Schema.define(version: 2021_12_17_093943) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "characters", "users"
 end

@@ -9,7 +9,7 @@ function NewCharacter({ user }) {
     const [universeGenreGame, setUniverseGenreGame] = useState("Universe, game or genre that this character belongs to")
     const [characterClass, setCharacterClass] = useState("Class archetype, such as: rogue, warrior, knight, ect.")
     const [imageUrl, setImageUrl] = useState("Post a url to an image")
-    const [description, setDescription] = useState("Describe your character, like their height, age, weight.")
+    const [description, setDescription] = useState("")
     const [history, setHistory] = useState("The backstory to your character that lays the foundation for their personality.")
 
     const [errors, setErrors] = useState([]);
@@ -97,9 +97,9 @@ function NewCharacter({ user }) {
                         <Label htmlFor="description">Description</Label>
                         <Textarea
                             type="text"
+                            placeholder="Describe your character, like their height, age, weight."
                             id="description"
                             rows="10"
-                            value={description}
                             onChange={(e) => setDescription(e.target.value)}
                         />
                     </FormField>
