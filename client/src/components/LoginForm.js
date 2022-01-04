@@ -21,7 +21,8 @@ function LoginForm({onLogin}) {
             if (r.ok) {
                 r.json().then((user) => onLogin(user));
             } else {
-                r.json().then((err) => setErrors(err.errors));
+                r.json().then((err) => {
+                    setErrors(err.errors)});
             }
         });
     }
@@ -55,7 +56,7 @@ function LoginForm({onLogin}) {
             </FormField>
             <FormField>
                 {errors.map((err) => (
-                    <Error key={err}></Error>
+                    <Error key={err}>{err}</Error>
                 ))}
             </FormField>
         </form>

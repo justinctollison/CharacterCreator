@@ -4,13 +4,13 @@ import { Button, Error, FormField, Input, Label, Textarea } from "../styles";
 import styled from "styled-components";
 
 function NewCharacter({ user }) {
-    const [name, setName] = useState("My Character")
-    const [race, setRace] = useState("Race")
-    const [universeGenreGame, setUniverseGenreGame] = useState("Universe, game or genre that this character belongs to")
-    const [characterClass, setCharacterClass] = useState("Class archetype, such as: rogue, warrior, knight, ect.")
-    const [imageUrl, setImageUrl] = useState("Post a url to an image")
+    const [name, setName] = useState("")
+    const [race, setRace] = useState("")
+    const [universeGenreGame, setUniverseGenreGame] = useState("")
+    const [characterClass, setCharacterClass] = useState("")
+    const [imageUrl, setImageUrl] = useState("")
     const [description, setDescription] = useState("")
-    const [history, setHistory] = useState("The backstory to your character that lays the foundation for their personality.")
+    const [history, setHistory] = useState("")
 
     const [errors, setErrors] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -53,7 +53,7 @@ function NewCharacter({ user }) {
                         <Input
                             type="text"
                             id="name"
-                            value={name}
+                            placeholder="My Character"
                             onChange={(e) => setName(e.target.value)}
                         />
                     </FormField>
@@ -62,7 +62,7 @@ function NewCharacter({ user }) {
                         <Input
                             type="text"
                             id="race"
-                            value={race}
+                            placeholder="Race"
                             onChange={(e) => setRace(e.target.value)}
                         />
                     </FormField>
@@ -71,7 +71,7 @@ function NewCharacter({ user }) {
                         <Input
                             type="text"
                             id="universeGenreGame"
-                            value={universeGenreGame}
+                            placeholder="Universe, game or genre that this character belongs to"
                             onChange={(e) => setUniverseGenreGame(e.target.value)}
                         />
                     </FormField>
@@ -80,7 +80,7 @@ function NewCharacter({ user }) {
                         <Input
                             type="text"
                             id="characterClass"
-                            value={characterClass}
+                            placeholder="Class archetype, such as: rogue, warrior, knight, ect."
                             onChange={(e) => setCharacterClass(e.target.value)}
                         />
                     </FormField>
@@ -89,7 +89,7 @@ function NewCharacter({ user }) {
                         <Input
                             type="text"
                             id="imageUrl"
-                            value={imageUrl}
+                            placeholder="Post a url to an image"
                             onChange={(e) => setImageUrl(e.target.value)}
                         />
                     </FormField>
@@ -109,7 +109,7 @@ function NewCharacter({ user }) {
                             type="text"
                             id="history"
                             rows="10"
-                            value={history}
+                            placeholder="The backstory to your character that lays the foundation for their personality."
                             onChange={(e) => setHistory(e.target.value)}
                         />
                     </FormField>

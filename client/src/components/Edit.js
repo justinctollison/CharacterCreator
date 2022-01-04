@@ -143,7 +143,6 @@ function Edit() {
                 <p>{character.image_url}</p>
                 <p>{character.description}</p>
                 <p>{character.history}</p>
-                {/* <p><cite>By {user.username} </cite></p> */}
             </WrapperChild>
         </Wrapper>
     );

@@ -42,7 +42,7 @@ const Wrapper = styled.header`
 `;
 
 const Logo = styled.h1`
-  font-family: "Permanent Marker", cursive;
+  font-family: "Montserrat";
   font-size: 3rem;
   color: black;
   margin: 0;

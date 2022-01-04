@@ -10,6 +10,7 @@ class CharactersController < ApplicationController
 
     #uses the current user and then stores the current user's information into the nested data of the character through associations.
     def create
+        # character = @current_user.characters.build(character_params)
         character = Character.new(character_params)
         character.user_id = @current_user.id
         if character.save

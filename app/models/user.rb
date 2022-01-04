@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    #uses ActiveModel::SecurePassword in order to add methods to set and authenticate an encrypted password. Requires password_digest, automatically adds
+    #uses ActiveModel::SecurePassword in order to add methods to set and authenticate an hashes password. Requires password_digest, automatically adds
     #validations for presence of password and confirmation of password
     has_secure_password
 
