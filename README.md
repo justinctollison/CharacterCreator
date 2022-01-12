@@ -1,4 +1,4 @@
-<h1>Welcome to Roleplaying Game Character Creator!<h1>
+<h1>Welcome to Roleplaying Game Character Creator!</h1>
 
 Hello and welcome to my Phase 4 Project for Flatiron School. We were tasked with creating a Rails API and using Ruby on Rails to handle our back-end logic while we used React as our Front-end. We also used postgresql as our database. 
 
