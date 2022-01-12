@@ -1,7 +1,16 @@
-## Welcome
-Hello and welcome to my Phase 4 Project for Flatiron School. We were tasked with creating a Rails API and using Ruby on Rails to handle our back-end logic while we used React as our Front-end. We also used postgresql as our database. The idea for my project was to create a form to store roleplaying characters for different users and have a place to view their characters and save their work or to view other user's characters to get inspiration or ideas from. I myself found that I was creating numerous character ideas between the games I played such as World of Warcraft and Final Fantasy XIV. There is also plans to expand the project to include DND character sheets in order to keep better track of a character. Overall, the idea of the project is to keep track of your personal characters and to have a medium to write down their information.
+<h1>Welcome to Roleplaying Game Character Creator!<h1>
+
+Hello and welcome to my Phase 4 Project for Flatiron School. We were tasked with creating a Rails API and using Ruby on Rails to handle our back-end logic while we used React as our Front-end. We also used postgresql as our database. 
+
+The idea for my project was to create a form to store roleplaying characters for different users and have a place to view their characters and save their work or to view other user's characters to get inspiration or ideas from. I myself found that I was creating numerous character ideas between the games I played such as World of Warcraft and Final Fantasy XIV. There is also plans to expand the project to include DND character sheets in order to keep better track of a character. Overall, the idea of the project is to keep track of your personal characters and to have a medium to write down their information.
+
+You can view the project at https://phase4project.herokuapp.com/
+
+OR
 
 Below are the requirements to run the project on your personal machine, thanks for reading!
+
+Video demo: https://www.youtube.com/watch?v=pvIoCSd1-mA
 
 ## Requirements
 
@@ -24,6 +33,7 @@ When you're ready to start viewing the project, run:
 
 ```sh
 bundle install
+rails db:create
 npm install --prefix client
 rails db:migrate
 ```
@@ -34,59 +44,6 @@ You can use the following commands to run the application:
 - `npm start --prefix client`: run the frontend on
   [http://localhost:4000](http://localhost:4000)
 
-## Deploying
-
-This application has all the starter code needed to help you deploy your
-application to Heroku. It's recommended to deploy your project early and push up
-changes often to ensure that your code works equally well in production and
-development environments.
-
-If you've already set up your environment to deploy to Heroku, you can run the
-commands below to deploy your application. If not, make sure to check out the
-Environment Setup section below.
-
-To deploy, first log in to your Heroku account using the Heroku CLI:
-
-```sh
-heroku login
-```
-
-Create the new Heroku app:
-
-```sh
-heroku create my-app-name
-```
-
-Add the buildpacks for Heroku to build the React app on Node and run the Rails
-app on Ruby:
-
-```sh
-heroku buildpacks:add heroku/nodejs --index 1
-heroku buildpacks:add heroku/ruby --index 2
-```
-
-To deploy, commit your code and push the changes to Heroku:
-
-```sh
-git add .
-git commit -m 'Commit message'
-git push heroku main
-```
-
-> Note: depending on your Git configuration, your default branch might be named
-> `master` or `main`. You can verify which by running
-> `git branch --show-current`. If it's `master`, you'll need to run
-> `git push heroku master` instead.
-
-Any time you have changes to deploy, just make sure your changes are committed
-on the main branch of your repo, and push those changes to Heroku to deploy
-them.
-
-You can view your deployed app with:
-
-```sh
-heroku open
-```
 
 ## Environment Setup
 
