@@ -6,6 +6,7 @@ import CharacterList from './CharacterList';
 import NewCharacter from './NewCharacter';
 import Character from "./Character";
 import Edit from "./Edit";
+import Home from "./Home";
 
 {/*//TODO: 
   Fix styling 
@@ -39,6 +40,7 @@ function App() {
       <NavBar user={user} setUser={setUser} />
       <main>
         <Routes>
+          <Route path="/" element= { <Home/>}></Route>
           <Route path="/new" element= {<NewCharacter user={user}/>}>
             {/* <NewCharacter user={user} /> */}
           </Route>

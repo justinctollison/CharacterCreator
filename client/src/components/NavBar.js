@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Button } from "../styles";
+import { Button, Box } from "../styles";
 
 
 function NavBar({ user, setUser}) {
@@ -20,6 +20,7 @@ function NavBar({ user, setUser}) {
                 RPGC Creator
             </Logo>
             <Nav>
+                <Box>Hello, {user.username}</Box>
                 <Button as={Link} to="/characters">
                     Character List
                 </Button>

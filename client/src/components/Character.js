@@ -54,7 +54,7 @@ function Character({user}) {
   console.log(character.user)
 
     return (
-        <Box>
+    <Box>
         <img src={character.image_url} alt="display image"></img>
         <h2>{character.name}</h2>
         <p><b>Race:</b> {character.race}</p>

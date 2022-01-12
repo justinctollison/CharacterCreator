@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   #destroy through a DELETE request, removes an object from the database
   #update through a PUT request, updates an existing object in the database
   #CRUD, create read update delete
+  get "/characters/alpha", to: "characters#alpha"
   resources :characters, only: [:index, :create, :show, :destroy, :update]
   resources :users, only: [:index]
 
@@ -16,8 +17,6 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
 
-
-  
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
   #fallback route in case the initial routes fail their requests. Using default, not edited.

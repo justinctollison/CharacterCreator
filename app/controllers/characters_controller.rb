@@ -20,6 +20,11 @@ class CharactersController < ApplicationController
         end
     end
 
+    def alpha
+        characters = Character.alpha
+        render json: characters
+    end
+
     #shows specific character based on id, ex: character/:id
     def show
         character = Character.find(params[:id])
@@ -37,7 +42,7 @@ class CharactersController < ApplicationController
     #then renders an error. ex: trying to edit characters/8 even through characters/8 was deleted. New characters do not take up a deleted id in the database
     def update
         character = Character.find(params[:id])
-        if character
+        if character && character.user.id == @current_user.id
             if character.update(character_params)
                 render json: character
             else
@@ -54,5 +59,7 @@ class CharactersController < ApplicationController
     def character_params
         params.require(:character).permit(:name, :character_class, :race, :image_url, :description, :history, :universe_genre_game, :likes,)
     end
+
+
 
 end
