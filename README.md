@@ -4,9 +4,9 @@ Hello and welcome to my Phase 4 Project for Flatiron School. We were tasked with
 
 The idea for my project was to create a form to store roleplaying characters for different users and have a place to view their characters and save their work or to view other user's characters to get inspiration or ideas from. I myself found that I was creating numerous character ideas between the games I played such as World of Warcraft and Final Fantasy XIV. There is also plans to expand the project to include DND character sheets in order to keep better track of a character. Overall, the idea of the project is to keep track of your personal characters and to have a medium to write down their information.
 
-Video demo: https://www.youtube.com/watch?v=pvIoCSd1-mA
+Video demo: [Pending Video link]
 
-You can view the project at https://phase4project.herokuapp.com/
+You can view the project at [Pending Heroku Link]
 
 OR
 
